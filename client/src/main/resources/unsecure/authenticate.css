@@ -1,0 +1,21 @@
+.row-container {
+    padding: 0 15px;
+}
+
+.jangular-content {
+    padding: 30px 30px 30px 30px;
+}
+
+.column-left {
+    text-align: right;
+    font-weight: bolder;
+}
+
+.column-right {
+    text-align: left;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}

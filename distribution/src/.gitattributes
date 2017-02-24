@@ -1,0 +1,7 @@
+# See https://help.github.com/articles/dealing-with-line-endings
+
+# By default, normalize all files to unix line endings when commiting.
+* text
+
+# Make sure shell scripts have unix line endings
+*.sh eol=lf

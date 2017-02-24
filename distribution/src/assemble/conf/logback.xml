@@ -1,0 +1,39 @@
+<configuration debug='false' scan='true' scanPeriod='30 seconds'>
+
+	<appender name='FILE' class='ch.qos.logback.core.rolling.RollingFileAppender'>
+		<file>${distribution.log.dir}/jAngular.log</file>
+
+		<rollingPolicy class='ch.qos.logback.core.rolling.FixedWindowRollingPolicy'>
+			<fileNamePattern>${distribution.log.dir}/jAngular.%i.log</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>12</maxIndex>
+		</rollingPolicy>
+
+		<triggeringPolicy class='ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy'>
+			<maxFileSize>50MB</maxFileSize>
+		</triggeringPolicy>
+
+		<encoder>
+			<pattern>%date{dd MMM HH:mm:ss.SSS} %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name='STDOUT' class='ch.qos.logback.core.ConsoleAppender'>
+		<encoder>
+			<pattern>%date{dd MMM HH:mm:ss.SSS} %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name='org.ozzysoft' level='debug'/>
+
+	<logger name='org.springframework' level='info'/>
+	<logger name='org.springframework.beans.factory.support' level='info'/>
+	<logger name='org.springframework.web.context.support.XmlWebApplicationContext' level='info'/>
+
+	<root>
+		<level value='debug'/>
+		<appender-ref ref='FILE'/>
+		<!--<appender-ref ref='STDOUT'/>-->
+	</root>
+
+</configuration>

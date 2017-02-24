@@ -1,0 +1,55 @@
+<configuration debug='true' scan='true' scanPeriod='60 seconds'>
+
+	<appender name='FILE' class='ch.qos.logback.core.rolling.RollingFileAppender'>
+		<file>${jAngular.log.dir}/jAngular.webapp.log</file>
+
+		<rollingPolicy class='ch.qos.logback.core.rolling.FixedWindowRollingPolicy'>
+			<fileNamePattern>${jAngular.log.dir}/jAngular.webapp.%i.log</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>13</maxIndex>
+		</rollingPolicy>
+
+		<triggeringPolicy class='ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy'>
+			<maxFileSize>10MB</maxFileSize>
+		</triggeringPolicy>
+
+		<encoder>
+			<pattern>%date{dd MMM HH:mm:ss.SSS} %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name='STDOUT' class='ch.qos.logback.core.ConsoleAppender'>
+		<encoder>
+			<pattern>%date{dd MMM HH:mm:ss.SSS} %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<logger name='org.ozzysoft' level='TRACE'/>
+	<logger name='org.ozzysoft.jangular.web.common.services.security' level='TRACE'/>
+	<logger name='org.ozzysoft.jangular.common.performance' level='INFO'/>
+
+	<logger name='org.springframework' level='INFO'/>
+	<logger name='org.springframework.beans.factory.support' level='INFO'/>
+	<logger name='org.springframework.web.context.support.XmlWebApplicationContext' level='INFO'/>
+	<logger name='org.springframework.web' level='INFO'/>
+	<logger name='org.springframework.web.servlet.DispatcherServlet' level='DEBUG'/>
+
+	<logger name='org.springframework.security' level='INFO'/>
+	<logger name='org.springframework.security.web.access.intercept.FilterSecurityInterceptor' level='INFO'/>
+	<logger name='org.springframework.security.web.session.SessionManagementFilter' level='DEBUG'/>
+	<logger name='org.springframework.security.web.authentication.logout.LogoutFilter' level='DEBUG'/>
+	<logger name='org.springframework.security.web.context.SecurityContextPersistenceFilter' level='INFO'/>
+	<logger name='org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter' level='DEBUG'/>
+	<logger name='org.springframework.security.web.authentication.AnonymousAuthenticationFilter' level='INFO'/>
+	<logger name='org.springframework.security.web.context.HttpSessionSecurityContextRepository' level='INFO'/>
+	<logger name='org.springframework.security.web.authentication.session.SessionFixationProtectionStrategy' level='DEBUG'/>
+
+	<root>
+		<level value='DEBUG'/>
+
+		<appender-ref ref='FILE'/>
+		<appender-ref ref='STDOUT'/>
+	</root>
+
+</configuration>
+

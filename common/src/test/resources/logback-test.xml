@@ -1,0 +1,30 @@
+<configuration>
+
+	<appender name='FILE' class='ch.qos.logback.core.FileAppender'>
+		<file>common-test.log</file>
+
+		<encoder>
+			<pattern>%date{dd MMM HH:mm:ss.SSS} %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name='STDOUT' class='ch.qos.logback.core.ConsoleAppender'>
+		<encoder>
+			<pattern>%date{dd MMM HH:mm:ss.SSS} %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name='org.ozzysoft' level='DEBUG'/>
+	<logger name='com.qos' level='WARN'/>
+
+	<logger name='org.springframework' level='warn'/>
+	<logger name='org.springframework.web.context.support.XmlWebApplicationContext' level='warn'/>
+
+	<root>
+		<level value='INFO'/>
+
+		<appender-ref ref='FILE'/>
+		<!--<appender-ref ref='STDOUT'/>-->
+	</root>
+
+</configuration>

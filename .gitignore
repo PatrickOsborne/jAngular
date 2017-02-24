@@ -1,0 +1,14 @@
+/target
+/.classpath
+/.settings
+/.project
+/.idea
+/tmp
+/logs
+*/logs
+
+*.log
+*.iml
+
+devEnv.sh
+

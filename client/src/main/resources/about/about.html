@@ -1,0 +1,24 @@
+<div class='container'>
+   <jangular-header></jangular-header>
+
+   <div class='jangular-content'>
+
+      <div class='row-container'>
+         <div class='row'>
+            <div class='col-xs-6 version-column-left'>Version:</div>
+            <div class='col-xs-6 version-column-right'>{{versionData.version}}</div>
+         </div>
+         <div class='row'>
+            <div class='col-xs-6 version-column-left'>Build Time:</div>
+            <div class='col-xs-6 version-column-right'>{{versionData.buildTimestamp}}</div>
+         </div>
+         <div class='row'>
+            <div class='col-xs-6 version-column-left'>Git Commit:</div>
+            <div class='col-xs-6 version-column-right'>{{versionData.commit}}</div>
+         </div>
+      </div>
+
+   </div>
+
+   <jangular-footer></jangular-footer>
+</div>

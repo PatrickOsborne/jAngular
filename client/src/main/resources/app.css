@@ -1,0 +1,49 @@
+.navbar {
+    min-height: 30px;
+    margin-bottom: 0px;
+    border-bottom: medium inset green;
+}
+
+.navbar-brand {
+    float: left;
+}
+
+.navbar-links {
+    float: right;
+}
+
+.row-container {
+    padding: 0 15px;
+}
+
+.header-links {
+    float: right;
+}
+
+.brand {
+}
+
+#about {
+    display: block;
+}
+
+#home {
+    display: block;
+}
+
+.jangular-content {
+    padding: 30px 30px 30px 30px;
+}
+
+.footer {
+    padding: 6px 15px 6px 15px;
+}
+
+.version-column-left {
+    text-align: right;
+    font-weight: bolder;
+}
+
+.version-column-right {
+    text-align: left;
+}

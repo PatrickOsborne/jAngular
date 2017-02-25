@@ -50,10 +50,10 @@
 		<buildStamp.commit>${buildNumber}</buildStamp.commit>
 	</properties>
 
-	<!--<scm>-->
-		<!--&lt;!&ndash;&lt;!&ndash; replace with value appropriate for your project &ndash;&gt;&ndash;&gt;-->
-		<!--<connection>git@github.com:PatrickOsborne/jAngular.git</connection>-->
-	<!--</scm>-->
+	<scm>
+		<!--&lt;!&ndash; replace with value appropriate for your project &ndash;&gt;-->
+		<connection>scm:git:git@github.com:PatrickOsborne/jAngular.git</connection>
+	</scm>
 
 	<repositories>
 	</repositories>
@@ -232,19 +232,19 @@
 				<version>${sonar.plugin.version}</version>
 			</plugin>
 
-			<!--<plugin>-->
-				<!--<groupId>org.codehaus.mojo</groupId>-->
-				<!--<artifactId>buildnumber-maven-plugin</artifactId>-->
-				<!--<version>1.1</version>-->
-				<!--<executions>-->
-					<!--<execution>-->
-						<!--<phase>validate</phase>-->
-						<!--<goals>-->
-							<!--<goal>create</goal>-->
-						<!--</goals>-->
-					<!--</execution>-->
-				<!--</executions>-->
-			<!--</plugin>-->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 
 		</plugins>
 	</build>

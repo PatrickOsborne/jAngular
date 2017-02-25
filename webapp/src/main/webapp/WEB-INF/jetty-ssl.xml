@@ -9,7 +9,7 @@
 <Configure id='sslContextFactory' class='org.eclipse.jetty.util.ssl.SslContextFactory'>
 	<Set name='KeyStorePath'><Property name='jetty.home' default='.'/>/<Property name='jetty.keystore' default='src/main/webapp/WEB-INF/etc/keystore'/></Set>
 	<Set name='KeyStorePassword'>
-		<Property name='jetty.keystore.password' default='password'/>
+		<Property name='jetty.keystore.password' default='testtest'/>
 	</Set>
 	<Set name='EndpointIdentificationAlgorithm'></Set>
 	<Set name='ExcludeCipherSuites'>
